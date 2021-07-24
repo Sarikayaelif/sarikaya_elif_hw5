@@ -1,0 +1,252 @@
+﻿@charset "UTF-8";
+
+*, *:before, *:after { box-sizing: border-box; }
+
+body { font-family: open sans, Arial, sans-serif; font-size: 16px; color: #fff; background-color: #ccc; width: 100%; }
+
+h1, h2, h3, h4 { text-align: center; }
+.hidden { display: none; }
+
+#siteContainer { margin: 0 auto; background-color: white; width: 100%; }
+#mainHeader { width: 100%; margin: 0 auto; display: flex; flex-direction: row; justify-content: space-around; align-items: center; height: 80px; background-color: #fff; }
+
+#logoCon { padding: 0; height: 44px; }
+#logoCon img { height: 100%; width: auto; }
+
+
+
+#navCon { display: none; position: absolute; background: #222c8c; top: 80px; z-index: 9; padding: 15px; width: 90%; text-align: center; }
+#navCon li { margin-bottom: 15px; }
+#navCon li a { text-decoration: none; font-size: 20px; font-weight: bold; }
+
+#navCon.slideToggle { display: block !important; }
+
+#mainHeader button { display: block; background: url(../images/burger.svg) center no-repeat; border: 0px; width: 25px; height: 35px; transition: all .5s ease; }
+#mainHeader button.expanded { -webkit-transform: rotate(90deg); -ms-transform: rotate(90deg); transform: rotate(90deg); }
+
+
+
+
+#bannerCon { width: 100%; height: 130px; margin-bottom: 10px; background-image: url('../images/bg-W.jpg'); background-repeat: no-repeat; background-position: right center; background-size: 100% auto; position: relative; display: flex; align-items: center; justify-content: center; /*bunu niye yazmisim hatirlamiyorum*/ /* bunu banner üstünde ki başlıkları ortalamak için yazdık */ }
+
+#bannerCon p { position: absolute; font-size: 24px; left: 450px; top: 300px; height: auto; font-family: 'Monoton', cursive; }
+
+.promos { width: 100%; padding: 30px; margin: 0px auto; }
+
+.promos img { height: auto; width: 100%; }
+
+.promos p, h3, a { color: #bcbcc1; line-height: 1.2em; }
+
+
+.animate { width: 90%; stroke-dasharray: 1500; stroke-dashoffset: 1500; animation: drawIt 10s linear forwards; }
+
+@keyframes drawIt {
+    to { stroke-dashoffset: 0; }
+}
+
+.animateloop .cls-1 { fill: #22235e; animation: colorchangeloop 1s; animation-iteration-count: infinite; }
+
+@keyframes colorchangeloop {
+    0% { fill: #22235e; }
+    50% { fill: #fff; }
+    100% { fill: #22235e; }
+}
+
+#AboutUs { display: flex; flex-wrap: wrap; padding: 30px; }
+.Beer { width: 50%; position: relative; min-height: 600px; }
+.Beer img { width: 100%; position: absolute; }
+
+.Beer img.bubble { top: 0; left: 0; opacity: 0; }
+.Beer img.bubble1 { top: 0; left: 0; opacity: 0; animation: show 5s linear forwards; }
+
+@keyframes show {
+    to { opacity: 1; }
+}
+
+.Beer img.empty { 
+    top: 89px; 
+    left: 4px; 
+    opacity: 1; }
+
+.Beer img.empty0 { top: 89px; left: 4px; opacity: 1; animation: hide 5s linear forwards; }
+
+@keyframes hide {
+    to { opacity: 0; }
+}
+
+#socialCon { background-color: #bcbcc1; }
+#smallLogo { display: flex; flex-direction: column; align-items: center; }
+#social { display: flex; flex-direction: column; align-items: center; padding-bottom: 20px; }
+
+#social a { font-size: 24px; font-family: 'Monoton', cursive;; text-decoration: none; color: white; }
+
+#subscribe { }
+#subscribe h3 { color: white; }
+#subscribe button { margin: 0 auto; display: block; }
+#subscribe input { background: #fff; border: solid 1px #ccc; margin: 0 auto 15px auto; }
+#email { border-style: none; }
+
+#footerCon { padding-bottom: 10px; background-color: #222c8c; text-align: center; line-height: 30px; }
+
+#footerCon a { color: white; }
+/*about us page*/
+#bannerAbout { width: 100%; height: 400px; /*bu boy mobile icin cok fazla olabilir*/ margin-bottom: 30px; background-image: url('../images/beer-dispenser-W.jpg'); background-repeat: no-repeat; background-position: right center; background-size: 100% auto; position: relative; }
+#bannerAbout p { position: absolute; font-size: 24px; left: 450px; top: 300px; height: auto; font-family: 'Monoton', cursive; }
+
+/*more green page*/
+#bannerGreen { width: 100%; height: 400px; margin-bottom: 30px; background-image: url('../images/wind-turbine-W.jpg'); background-repeat: no-repeat; background-position: right center; background-size: 100% auto; position: relative; display: flex; align-items: center; }
+#bannerGreen p { position: absolute; font-size: 24px; left: 500px; top: 300px; height: auto; font-family: 'Monoton', cursive; }
+/*buy beer page*/
+#bannerBuyBeer { width: 100%; height: 400px; margin-bottom: 30px; background-image: url('../images/colorbanner-W.png'); background-repeat: no-repeat; background-position: right center; background-size: 100% auto; position: relative; display: flex; align-items: center; }
+#bannerBuyBeer p { position: absolute; font-size: 24px; left: 500px; top: 100px; height: auto; font-family: 'Monoton', cursive; }
+#productCon { display: flex; flex-direction: column; align-items: center; }
+.product { padding-bottom: 20px; }
+.product p { color: grey; }
+.product a { color: red; }
+
+/*contact us page*/
+#bannerContact { width: 100%; height: 400px; margin-bottom: 30px; background-image: url('../images/shot-glasses-on-tabletop-W.jpg'); background-repeat: no-repeat; background-position: right center; background-size: 100% auto; position: relative; display: flex; align-items: center; }
+#bannerContact p { position: absolute; font-size: 24px; left: 500px; top: 300px; height: auto; font-family: 'Monoton', cursive; }
+#contInfo { display: flex; flex-direction: column; }
+#location { padding-bottom: 10px; display: block; padding-left: 70px; }
+
+#formCon { padding-bottom: 10px; display: block; }
+#formCon { display: flex; flex-direction: column; align-items: center; margin-left: 80px; }
+
+section input { font-size: 1em; padding: 10px; border-radius: 5px; border: 1px solid grey; display: block; margin-bottom: 30px; }
+
+    section input:focus { outline: 0; border: 2px dashed grey; }
+
+#message { padding-bottom: 80px; }
+
+/***********BOTTLE**************/
+#bottleCon { background: #f7f7f7; width: 100%; position: relative; padding: 30px; display: flex; justify-content: center; }
+#bottleCon .bottleImg { position: relative; }
+#bottleCon .bottleImg.active1::before { display: none; }
+#bottleCon .bottleImg.active2::after { display:none; }
+
+#bottleCon .bottleImg img { height: 500px; width: auto; }
+
+#bottleCon .BottleButton { border: solid 3px #fff; animation: box-shadow 2s infinite; border-radius: 100%; background: red; width: 30px; height: 30px; position: absolute; }
+#bottleCon .BottleButton.first { left: 62px; top: 140px; }
+#bottleCon .BottleButton.second { left: 62px; bottom: 100px; }
+
+@keyframes box-shadow {
+        0% { box-shadow: 0 0 0 0 rgba(255, 0, 0, 1), 0 0 0 0 rgba(255, 0, 0, 1); }
+        40% { box-shadow: 0 0 0 10px rgba(255, 0, 0, 0), 0 0 0 0 rgba(255, 0, 0, 1); }
+        80% { box-shadow: 0 0 0 10px rgba(255, 0, 0, 0), 0 0 0 10px rgba(255, 0, 0, 0); }
+        100% { box-shadow: 0 0 0 0 rgba(255, 0, 0, 0), 0 0 0 10px rgba(255, 0, 0, 0); }
+    }
+
+#bottleCon .BottleInfo { display: none; border: solid 1px #ccc; border-radius: 15px; background: #fff; color: #ccc; padding: 15px; width: 80%; position: absolute; text-align: justify; z-index:9; }
+#bottleCon .BottleInfo.active { display: block; }
+#bottleCon .BottleInfo.first { left: unset; top: 30px; }
+#bottleCon .BottleInfo.second { right: unset; bottom: 170px; }
+    /***********BOTTLE**************/
+
+
+
+
+
+
+
+@media screen and (min-width: 425px) {
+    #bannerCon { height: 180px; }
+}
+
+
+@media screen and (min-width: 768px) {
+
+#siteContainer { }
+#mainHeader { }
+
+#logoCon { height: 50px; }
+
+#mainHeader button { display: none; }
+
+.animate { width: 500px; }
+
+
+#navCon { width: 100%; display: flex; flex-direction: column; position: relative; top: unset; right: unset; background: none; box-shadow: none; z-index: 1; padding: 0; text-align: unset; }
+
+#navCon ul { list-style-type: none; padding: 0; margin: 0; width: 100%; height: 100%; display: flex; align-items: center; justify-content: space-around; }
+
+#navCon ul li { float: left; width: 20%; position: relative; text-align: center; margin-bottom: unset; }
+
+#navCon ul li a { padding: 5px 0; color: #222c8c; font-size: 18px; text-decoration: none; display: block; width: 100%; text-align: center; }
+
+#navCon ul li a:hover { color: #dba868; }
+
+#navCon ul li:after { content: ''; width: 1px; height: 100%; background-color: #222c8c; position: absolute; top: 0; right: 0; }
+
+#navCon ul li:last-child:after { display: none; }
+
+#bannerCon { height: 320px; }
+
+#promoCon { display: flex; flex-direction: column; align-content: center; }
+
+.promos { display: flex; flex-direction: row; justify-content: space-around; }
+
+.promos img { margin-right: 80px; }
+
+.promos p, a { color: #bcbcc1; line-height: 1.2em; }
+.promos p { padding-right: 70px; padding-top: 50px; }
+#socialCon { display: flex; flex-direction: row; justify-content: space-around; padding-bottom: 30px; background-color: #bcbcc1; align-items: center; }
+
+#smalLogo { padding-left: 30px; }
+
+#social { display: flex; flex-direction: column; }
+
+#social a { font-size: 24px; font-family: 'Monoton', cursive;; text-decoration: none; color: white; }
+
+#subscribe h3 { color: white; }
+
+#email, input { border-style: none; border-left-width: 2px; border-left-color: grey; border-left-style: solid; border-bottom: 2px grey solid; background-color: #bcbcc1; }
+#email { }
+#footerCon { display: flex; flex-direction: row; justify-content: space-around; align-items: center; padding-bottom: 10px; height: 50px; background-color: #222c8c; }
+
+#footerCon a { color: white; }
+
+/*Contact us Page*/
+#contInfo { display: flex; flex-direction: row; justify-content: center; }
+#location img { padding: 50px; }
+/*buy beer page*/
+#productCon { display: flex; flex-direction: row; justify-content: space-around; padding-left: 20px; }
+
+/***********BOTTLE**************/
+#bottleCon { background: #f7f7f7; width: 100%; position: relative; padding: 30px; display: flex; justify-content: center; }
+#bottleCon .bottleImg { position: relative; }
+#bottleCon .bottleImg.active1::before { content: ''; display: block; width: 180px; height: 2px; background: #ccc; position: absolute; top: 102px; left: -100px; transform: rotate( 30deg ); }
+#bottleCon .bottleImg.active2::after { content: ''; display: block; width: 184px; height: 2px; background: #ccc; position: absolute; bottom: 100px; right: -90px; transform: rotate( 9deg ); }
+
+#bottleCon .bottleImg img { height: 500px; width: auto; }
+
+#bottleCon .BottleButton { border: solid 3px #fff; animation: box-shadow 2s infinite; border-radius: 100%; background: red; width: 30px; height: 30px; position: absolute; }
+#bottleCon .BottleButton.first { left: 62px; top: 140px; }
+#bottleCon .BottleButton.second { left: 62px; bottom: 100px; }
+
+@keyframes box-shadow {
+        0% { box-shadow: 0 0 0 0 rgba(255, 0, 0, 1), 0 0 0 0 rgba(255, 0, 0, 1); }
+        40% { box-shadow: 0 0 0 10px rgba(255, 0, 0, 0), 0 0 0 0 rgba(255, 0, 0, 1); }
+        80% { box-shadow: 0 0 0 10px rgba(255, 0, 0, 0), 0 0 0 10px rgba(255, 0, 0, 0); }
+        100% { box-shadow: 0 0 0 0 rgba(255, 0, 0, 0), 0 0 0 10px rgba(255, 0, 0, 0); }
+    }
+#bottleCon .BottleInfo { display: none; border: solid 1px #ccc; border-radius: 15px; background: #fff; color: #ccc; padding: 15px; width: 320px; position: absolute; text-align: justify; }
+#bottleCon .BottleInfo.active { display: block; }
+#bottleCon .BottleInfo.first { left: 40px; top: 40px; }
+#bottleCon .BottleInfo.second { right: 40px; bottom: 40px; }
+}
+/***********BOTTLE**************/
+
+@media screen and (min-width: 1080px) {
+
+#siteContainer { width: 1080px; }
+    #mainHeader { height: 100px; }
+
+    #bannerCon { height: 400px; }
+
+    #logoCon { height: 60px; padding-left: 15px; }
+    #navCon { padding-right: 15px; }
+
+    #navCon ul li a { font-size: 20px; }
+}
